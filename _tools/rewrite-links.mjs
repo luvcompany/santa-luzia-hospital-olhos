@@ -24,7 +24,7 @@ async function processFile(file) {
   const relPrefix = path.relative(path.dirname(file), FRAMER); // ex.: ../framerusercontent.com
 
   // https://framerusercontent.com/PATH  ->  relPrefix/PATH
-  txt = txt.replace(/https:\/\/framerusercontent\.com\/([^"'\s)\\]*)/g, (m, rest) => {
+  txt = txt.replace(/https:\/\/framerusercontent\.com\/([^"'\s,)\\]*)/g, (m, rest) => {
     return `${relPrefix}/${rest}`;
   });
 

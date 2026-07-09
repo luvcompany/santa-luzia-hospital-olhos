@@ -53,6 +53,9 @@ ele e **desconecte o domínio do Framer**.
   segurança após a migração (ela não afeta o visual). Para remover, apague a pasta
   `events.framer.com/` e as tags `<script src=".../events.framer.com/...">` dos HTMLs.
 - `https://framer.com/edit/init.mjs` é o hook do editor do Framer, inócuo para visitantes.
+- A **busca interna** do site depende de dois arquivos `searchIndex-*.js` que o CDN do Framer
+  se recusa a servir por download direto (HTTP 403). Todo o resto do site (páginas, imagens,
+  layout) funciona normalmente; apenas a caixa de busca pode não retornar resultados.
 
 ## Como esta cópia foi gerada
 
